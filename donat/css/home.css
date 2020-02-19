@@ -1,0 +1,35 @@
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+.w3-top{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    }
+
+.sign-in{
+    padding-left: 80% !important;
+    padding-right: 5% !important;
+}
+
+.Categories{
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  background-color: white;
+  color: black;
+  padding: 15px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+div a{
+  display: inline;
+}
