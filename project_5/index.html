@@ -45,13 +45,13 @@
 </head>
 <body>
 <div class = "container">
-    <!--top navbar --> 
+    <!--top navbar -->
     <div class="header">
         <a class="home">Donat.io</a>
         <a class="sign-in">Sign In</a>
         <a class="sign-up">Sign Up</a>
     </div>
-  
+
   <!--category -->
 
     <div class = "Categories">
@@ -73,6 +73,14 @@
       <label for="female">Other</label></a>
     </div>
 <!-- content section-->
+
+
+
+
+
+
+
+
 <table id = "myTable">
 <div class="content">
   <tr><td id ="Health">Pink Ribbon Foundation</td></tr>
@@ -114,6 +122,50 @@
 </table>
 
 
+<div class = "userprofile" id="userprofile">
+<form action="/my-handling-form-page" method="post">
+ <ul>
+<div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" required>
+</div>
+<div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_mail" required>
+</div>
+    <label for="confe">Confirm E-mail:</label>
+    <input type="email" id="confe" name="confe" required>
+<div>
+    <label for="pass">Password:</label>
+    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
+    title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+    autocomplete="off">
+</div>
+    <label for="passc">Confirm Password:</label>
+    <input type="password" minlength="8" maxlength="25" id="mail" name="passc" required
+    title="Passwords must match" autocomplete="off">
+<div class = "eighteenv">
+  <p>Are you 18 or older?:</p>
+    <label for="yes">Yes</label>
+    <input type="radio" id="yes" name="Are you 18 or older?" value="Yes" required>
+    <label for="no">No</label>
+    <input type="radio" id="no" name="Are you 18 or older?" value="No" required>
+</div>
+
+<div>
+  <label></label>
+
+  <a><br><br><br><br><br><br><input type="submit" value="Submit" onClick="document.getElementById('hideaway').style.display='block';"></a>
+</div>
+
+ </ul>
+</form>
+</div>
+
+
+
+
+
   <!--footer-->
     <footer>
           <div class="footer-item">
@@ -121,7 +173,7 @@
                   <h3>Go help!</h3>
                   <p>Donate to save</p>
               </div>
-          </div>  
+          </div>
       </footer>
 </div>
 </body>
