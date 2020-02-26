@@ -1,0 +1,103 @@
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+
+body{
+    background-color: #24CE9A;
+    margin: 10px;
+    font-family: 'Abel';
+    text-align: center;
+    width: 580px;
+}
+
+.container{  
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [head-col-start] 180px [content-col-start] 180px [content-col-mid] 180px [head-col-end];
+  grid-template-rows: [head-row-start] auto [head-row-end] auto [content-row-end] auto [footer-row-end];
+}
+
+.item {
+    color: white;
+    padding: 1.5em 0;
+    font-size: 2em;
+  }
+  
+.header{
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    grid-column: head-col-start / head-col-end;
+    grid-row: head-row-start / head-row-end;
+    flex-wrap: wrap;
+    }
+
+.sign-in{
+    padding-left: 80% !important;
+    padding-right: 5% !important;
+}
+
+
+.Categories{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: #b3b3b3 ;
+    color: black;
+    padding: 15px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    grid-column: head-col-start / content-col-start;
+    grid-row: head-row-end / content-row-end;
+    
+  }
+ 
+
+
+  .collapsible {
+    background-color: #c6ccc8;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  .content {
+    padding: 0 18px;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    
+    border-style: solid;
+    border-width: 1px;
+  }
+  .properties {
+    font-weight: bold;
+    display: block;
+  }
+  
