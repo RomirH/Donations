@@ -29,8 +29,50 @@
     <div class="header">
         <a class="home">Donat.io</a>
         <a class="sign-in">Sign In</a>
-        <a class="sign-up">Sign Up</a>
+        <a class="sign-up"><button onclick="showSignup()">Sign Up</button></a>
     </div>
+
+
+    <script type= "text/javascript">
+    function showSignup() {
+      document.getElementById("signuppage").style.display = "block";
+    }
+  </script>
+
+  <div class="form-popup" id="signuppage">
+    <div class = "userprofile" id="userprofile">
+    <form action="" method="post">
+     <ul>
+  <a>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="user_name" required><br><br>
+        <label for="mail">E-mail:</label><br>
+        <input type="email" id="mail" name="user_mail" required><br><br>
+        <!--<label for="confe">Confirm E-mail:</label><br>
+        <input type="email" id="confe" name="confe" required><br><br> -->
+        <label for="pass">Password:</label><br>
+        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
+        title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        autocomplete="off" onkeyup='checkPass();'><br><br>
+        <label for="passc">Confirm Password:</label><br>
+        <input type="password" minlength="8" maxlength="25" id="passc" name="passc" required
+        title="Passwords must match" autocomplete="off" onkeyup='checkPass();'><br>
+        <span id='message'></span>
+    <div class = "eighteenv">
+      <p>Are you 18 or older?:</p>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="Are you 18 or older?" value="Yes" required>
+        <label for="no">No</label>
+        <input type="radio" id="no" name="Are you 18 or older?" value="No" required>
+    </div>
+    <div>
+      <a><br><br><button onclick="checkForm()">Submit</button></a>
+    </div>
+  </a>
+     </ul>
+    </form>
+    </div>
+  </div>
 
   <!--category -->
 
@@ -58,13 +100,6 @@
     </div>
 <!-- content section-->
 
-
-
-
-
-
-
-
 <table id = "myTable">
 <div class="content">
   <tr><td id ="Health">Pink Ribbon Foundation</td></tr>
@@ -84,13 +119,6 @@
   <tr><td id= "Public Service">The Earth Institute</td></tr>
   <tr><td id= "Health">International Society for Infectious Diseases</td></tr>
   <tr><td id= "Humanitarian">CARE</td></tr>
-
-
-
-
-
-
-
 
 
   <!--
@@ -117,46 +145,71 @@
 </div>
 </table>
 
+<br><br><br><br>
+<div class="form-popup" id="signuppage">
+  <div class = "userprofile" id="userprofile">
+  <form action="" method="post">
+   <ul>
+<a>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="user_name" required><br><br>
+      <label for="mail">E-mail:</label><br>
+      <input type="email" id="mail" name="user_mail" required><br><br>
+      <!--<label for="confe">Confirm E-mail:</label><br>
+      <input type="email" id="confe" name="confe" required><br><br> -->
+      <label for="pass">Password:</label><br>
+      <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
+      title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+      autocomplete="off" onkeyup='checkPass();'><br><br>
+      <label for="passc">Confirm Password:</label><br>
+      <input type="password" minlength="8" maxlength="25" id="passc" name="passc" required
+      title="Passwords must match" autocomplete="off" onkeyup='checkPass();'><br>
+      <span id='message'></span>
+  <div class = "eighteenv">
+    <p>Are you 18 or older?:</p>
+      <label for="yes">Yes</label>
+      <input type="radio" id="yes" name="Are you 18 or older?" value="Yes" required>
+      <label for="no">No</label>
+      <input type="radio" id="no" name="Are you 18 or older?" value="No" required>
+  </div>
+  <div>
+    <a><br><br><button onclick="checkForm()">Submit</button></a>
+  </div>
+</a>
+   </ul>
+  </form>
+  </div>
+</div>
 
-<div class = "userprofile" id="userprofile">
-<form action="/my-handling-form-page" method="post">
- <ul>
-<div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name" required>
-</div>
-<div>
-    <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_mail" required>
-</div>
-    <label for="confe">Confirm E-mail:</label>
-    <input type="email" id="confe" name="confe" required>
-<div>
-    <label for="pass">Password:</label>
-    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
-    title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-    autocomplete="off">
-</div>
-    <label for="passc">Confirm Password:</label>
-    <input type="password" minlength="8" maxlength="25" id="mail" name="passc" required
-    title="Passwords must match" autocomplete="off">
-<div class = "eighteenv">
-  <p>Are you 18 or older?:</p>
-    <label for="yes">Yes</label>
-    <input type="radio" id="yes" name="Are you 18 or older?" value="Yes" required>
-    <label for="no">No</label>
-    <input type="radio" id="no" name="Are you 18 or older?" value="No" required>
-</div>
+<script type= "text/javascript">
+function checkPass(){
+  if (document.getElementById('pass').value ==
+    document.getElementById('passc').value)
+    {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+    }
+    else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+</script>
 
-<div>
-  <label></label>
+<script type= "text/javascript">function closeSignup() {
+  document.getElementById("signup").style.display = "none";
+}</script>
 
-  <a><br><br><br><br><br><br><input type="submit" value="Submit" onClick="document.getElementById('hideaway').style.display='block';"></a>
-</div>
+<script type="text/javascript">
+function checkForm(form)
+  {
+    if(form.pwd1.value != "" && form.pass.value == form.passc.value) {
+        return false;
+      }
+    closeSignup();
+  }
+</script>
 
- </ul>
-</form>
-</div>
 
 
 

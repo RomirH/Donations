@@ -8,40 +8,26 @@ body
     font-family: 'Abel';
 }
 
-.userprofile {
-  /*display: flex;*/
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+.form-popup {
+  display: none;
+  padding: 2em;
+  position:  fixed;
+  right: 15px;
+  border: 3px solid black;
+  z-index: 9;
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  text-align: center;
 }
 
-}
-.userprofile label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-}
-.userprofile p{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
+.userprofile{
+  text-align: left;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 15px;
 }
 
-.userprofile input {
-  display: inline-block;
-  float: left;
-}
-
-.userprofile a{
-  display: inline-block;
-  align-items: left;
-  justify-content: left;
-}
 
 
 

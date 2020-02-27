@@ -10,9 +10,10 @@
 //      content.style.maxHeight = null;
 //    } else {
 //      content.style.maxHeight = content.scrollHeight + "px";
-//    } 
+//    }
 //  });
 //}
+
 
 document.querySelector('#search').onkeyup = (ev) => {
   console.log(ev.keyCode);
@@ -73,4 +74,3 @@ const submitCat = () =>{
         }
       }
     }}
-      
