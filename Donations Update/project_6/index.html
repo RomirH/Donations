@@ -28,51 +28,24 @@
     <!--top navbar -->
     <div class="header">
         <a class="home">Donat.io</a>
-        <a class="sign-in">Sign In</a>
-        <a class="sign-up"><button onclick="showSignup()">Sign Up</button></a>
+        <a class="sign-in" href="html/signin.html" id="signin"><button>Sign In</button></a>
+        <a class="sign-up" href="html/signup.html" id="signup"><button>Sign Up</button></a>
     </div>
 
 
-    <script type= "text/javascript">
-    function showSignup() {
-      document.getElementById("signuppage").style.display = "block";
-    }
-  </script>
 
-  <div class="form-popup" id="signuppage">
-    <div class = "userprofile" id="userprofile">
-    <form action="" method="post">
-     <ul>
-  <a>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="user_name" required><br><br>
-        <label for="mail">E-mail:</label><br>
-        <input type="email" id="mail" name="user_mail" required><br><br>
-        <!--<label for="confe">Confirm E-mail:</label><br>
-        <input type="email" id="confe" name="confe" required><br><br> -->
-        <label for="pass">Password:</label><br>
-        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
-        title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-        autocomplete="off" onkeyup='checkPass();'><br><br>
-        <label for="passc">Confirm Password:</label><br>
-        <input type="password" minlength="8" maxlength="25" id="passc" name="passc" required
-        title="Passwords must match" autocomplete="off" onkeyup='checkPass();'><br>
-        <span id='message'></span>
-    <div class = "eighteenv">
-      <p>Are you 18 or older?:</p>
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="Are you 18 or older?" value="Yes" required>
-        <label for="no">No</label>
-        <input type="radio" id="no" name="Are you 18 or older?" value="No" required>
-    </div>
-    <div>
-      <a><br><br><button onclick="checkForm()">Submit</button></a>
-    </div>
-  </a>
-     </ul>
-    </form>
-    </div>
-  </div>
+    <!--<script type="text/javascript">
+      /* this just grabs the value of the first cookie for your site.
+       * if you use cookies elsewhere, you'll need to add logic to
+       * make sure you get the correct cookie. */
+      var text = document.cookie.split(";")[0].split("=")[1];
+      document.getElementById("signin").innerHTML = text;
+      if (document.getElementById("signin").innerHTML == "undefined"){
+        document.getElementById("signin").innerHTML = "Sign In";
+      }
+    </script>-->
+
+
 
   <!--category -->
 
@@ -146,6 +119,7 @@
 </table>
 
 <br><br><br><br>
+
 <div class="form-popup" id="signuppage">
   <div class = "userprofile" id="userprofile">
   <form action="" method="post">
@@ -155,8 +129,7 @@
       <input type="text" id="name" name="user_name" required><br><br>
       <label for="mail">E-mail:</label><br>
       <input type="email" id="mail" name="user_mail" required><br><br>
-      <!--<label for="confe">Confirm E-mail:</label><br>
-      <input type="email" id="confe" name="confe" required><br><br> -->
+
       <label for="pass">Password:</label><br>
       <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
       title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -217,13 +190,43 @@ function checkForm(form)
 
   <!--footer-->
     <footer>
-          <div class="footer-item">
+          <div id="footer-item">
               <div class="label">
                   <h3>Go help!</h3>
                   <p>Donate to save</p>
               </div>
           </div>
       </footer>
+
+      <script type="text/javascript">
+        function getUrlVars() {
+          var vars = {};
+          var url = decodeURIComponent(window.location.href.replace(/\+/g, '%20'));
+          var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                function(m,key,value) {
+            vars[key] = value;
+          });
+          return vars;
+        }
+        var text = getUrlVars()["username"];
+        document.getElementById("signin").innerHTML = text;
+        if (document.getElementById("signin").innerHTML == "undefined"){
+          document.getElementById("signin").innerHTML = "Sign In";
+          document.getElementById("signin").setAttribute("href", "html/signin.html");
+          document.getElementById("footer-item").style.display = "none";
+        //document queryselector display to
+        }
+        else{
+        document.getElementById("signin").innerHTML = "Welcome, " + text;
+        document.getElementById("signin").removeAttribute("href");
+        document.getElementById("signup").innerHTML = "Sign Out";
+        document.getElementById("signup").href="index.html";
+        document.getElementById("footer-item").style.display = "flex";
+      }
+
+      </script>
+
+
 </div>
 <script type="text/javascript" src="content.js"></script>
 </body>
