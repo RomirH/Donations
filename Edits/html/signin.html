@@ -19,7 +19,7 @@
 
   <div class="form-popup" id="signuppage">
     <div class = "userprofile" id="userprofile">
-    <form action="../html/donatefixed.html" method="GET" onsubmit="store()">
+    <form id="form" action="../donate.html" method="GET" onsubmit="store()">
      <ul>
   <a>
         <label for="name">Name:</label><br>
@@ -42,15 +42,39 @@
 
   <script type= "text/javascript">
   function checkPass2(){
-    if (document.getElementById('pass').value == "password1")
-      {
-      document.getElementById('message').style.color = 'green';
-      document.getElementById('message').innerHTML = 'Password Correct';
-      checkForm();
+    if(document.getElementById('username').value =="Willie"){
+      if (document.getElementById('pass').value == "password1")
+        {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password Correct';
+        document.getElementById('form').action = "../html/donatefixed.html"
+        checkForm();
+        }
+        else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password Incorrect';
       }
-      else {
+    }
+    else if (document.getElementById('username').value =="Wildcat"){
+      if (document.getElementById('pass').value == "password1")
+        {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password Correct';
+        document.getElementById('form').action = "../html/donatefixed2.html"
+
+        checkForm();
+        }
+        else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password Incorrect';
+      }
+    }
+
+    else {
       document.getElementById('message').style.color = 'red';
       document.getElementById('message').innerHTML = 'Password Incorrect';
+      document.getElementById('form').action = "";
+      document.getElementById('form').method = "POST";
     }
   }
   </script>

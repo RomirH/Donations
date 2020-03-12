@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="../css/df1.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -28,7 +28,7 @@
       </div>
      <div class="main">
          <div class="left">
-             <div class="categories">
+             <div class="categories"style="display:none;">
                  <p>My Dashboard:<br></p>
                  <a>
 
@@ -51,10 +51,11 @@
                  <div class="button">
                      <button type="button" onclick = "submitCat()"> Submit </button>
                  </div>
+
              </div>
          </div>
-         <div class="right">
-             <div class="wrap">
+         <div class="right" >
+             <div class="wrap" style="display:none;">
                   <div class="search">
                   <input type="text" class="searchTerm" id="search" placeholder="What causes do you want to support?" >
                   <button type="submit" class="searchButton">
@@ -63,7 +64,7 @@
                   </div>
              </div>
              <div class="cat">
-                 <div class="group">
+                 <div class="group"style="display:none;">
                      <input type="radio" id="Environment" name="category" value="Environment">
                      <label for="female">Environment</label><br>
                      <input type="radio" id="Education" name="category" value="Education">
@@ -77,17 +78,18 @@
                      <input type="radio" id="Other" name="category" value="Other">
                      <label for="female">Other</label></a>
 
-                     <div class="button">
+                     <div class="button"style="display:none;">
                          <button type="button" onclick = "submitCat()"> Submit </button>
                      </div>
                  </div>
+                 <div class="searchTerm2">Viewing History:</div>
              </div>
              <!-- Collapsibles -->
              <table class="col" id="myTable" border = "1">
              <div>
                  <tr>
                  <td id="Health" style="display:none;">Pink Ribbon Foundation</td>
-                 <td>
+                 <td style="display:none;">
                      <button type="button" class="collapsible">Pink Ribbon Foundation</button>
                      <div class="content">
                          <div class="left">
@@ -105,7 +107,7 @@
                  </tr>
                  <tr>
                  <td id= "Environment" style="display:none;">World Wildlife Fund</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">World Wildlife Fund</button>
                      <div class="content">
                          <div class="left">
@@ -124,7 +126,7 @@
                  </tr>
                  <tr>
                  <td id= "Humanitarian" style="display:none;">Child In Need Institute</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">Child In Need Institute</button>
                      <div class="content">
                          <div class="left">
@@ -142,8 +144,8 @@
                  </tr>
                  <tr>
                  <td id= "Humanitarian" style="display:none;">Childline India</td>
-                 <td>
-                     <button type="button" class="collapsible">Childline India</button>
+                  <td>
+                     <button type="button" class="collapsible" >Childline India</button>
                      <div class="content">
                          <div class="left">
                              <p class="properties">Mission Statement: </p>
@@ -160,7 +162,7 @@
                  </tr>
                  <tr>
                  <td id= "Humanitarian" style="display:none;">Red Cross</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">Red Cross</button>
                      <div class="content">
                          <div class="left">
@@ -178,7 +180,7 @@
                  </tr>
                  <tr>
                  <td id= "Humanitarian" style="display:none;">GreenPeace</td>
-                 <td>
+                  <td>
                      <button type="button" class="collapsible">GreenPeace</button>
                      <div class="content">
                          <div class="left">
@@ -196,7 +198,7 @@
                  </tr>
                  <tr>
                  <td id= "Environment" style="display:none;">Nature Conservance</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">Nature Conservance</button>
                      <div class="content">
                          <div class="left">
@@ -214,7 +216,7 @@
                  </tr>
                  <tr>
                  <td id= "Environment" style="display:none;">Environmental Defense Fund</td>
-                 <td>
+                  <td>
                      <button type="button" class="collapsible">Environmental Defense Fund</button>
                      <div class="content">
                          <div class="left">
@@ -232,7 +234,7 @@
                  </tr>
                  <tr>
                  <td id= "Education" style="display:none;">Room to Read</td>
-                 <td>
+                 <td style="display:none;">
                      <button type="button" class="collapsible">Room to Read</button>
                      <div class="content">
                          <div class="left">
@@ -250,7 +252,7 @@
                  </tr>
                  <tr>
                  <td id= "Public Service" style="display:none;">American Society for Microbiology</td>
-                 <td>
+                  <td>
                      <button type="button" class="collapsible">American Society for Microbiology</button>
                      <div class="content">
                          <div class="left">
@@ -268,7 +270,7 @@
                  </tr>
                  <tr>
                  <td id ="Health" style="display:none;">Consortium of Universities for Global Health</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">Consortium of Universities for Global Health</button>
                      <div class="content">
                          <div class="left">
@@ -286,7 +288,7 @@
                  </tr>
                  <tr>
                  <td id= "Health" style="display:none;">The Global Health Network</td>
-                 <td>
+                 <td style="display:none;">
                      <button type="button" class="collapsible">The Global Health Network</button>
                      <div class="content">
                          <div class="left">
@@ -304,7 +306,7 @@
                  </tr>
                  <tr>
                  <td id= "Public Service" style="display:none;">The Earth Institute</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">The Earth Institute</button>
                      <div class="content">
                          <div class="left">
@@ -322,7 +324,7 @@
                  </tr>
                  <tr>
                  <td id= "Health" style="display:none;">International Society for Infectious Diseases</td>
-                 <td>
+                  <td style="display:none;">
                      <button type="button" class="collapsible">International Society for Infectious Diseases</button>
                      <div class="content">
                          <div class="left">
@@ -340,7 +342,7 @@
                  </tr>
                  <tr>
                  <td id= "Humanitarian" style="display:none;">CARE</td>
-                 <td>
+                 <td style="display:none;">
                      <button type="button" class="collapsible">CARE</button>
                      <div class="content">
                          <div class="left">
@@ -404,22 +406,11 @@
             </div>
         </footer>
         <script type="text/javascript">
-          function getUrlVars() {
-            var vars = {};
-            var url = decodeURIComponent(window.location.href.replace(/\+/g, '%20'));
-            var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi,
-                  function(m,key,value) {
-              vars[key] = value;
-            });
-            return vars;
-          }
-          var text = getUrlVars()["username"];
-          text = "Willie";
-          document.getElementById("signin").innerHTML = text;
-          document.getElementById("signin").innerHTML = "Welcome, " + text;
-          document.getElementById("signin").href="donatehist1.html";
-          document.getElementById("signup").innerHTML = "Sign Out";
-          document.getElementById("signup").href="../index.html";
+
+          document.getElementById("signin").innerHTML = "Welcome, Willie";
+          document.getElementById("signin").removeAttribute("href");
+          document.getElementById("signup").innerHTML = "Back to Home";
+          document.getElementById("signup").href="donatefixed.html";
           document.getElementById("footer-item").style.display = "flex";
 
 
