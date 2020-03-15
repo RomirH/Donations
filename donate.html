@@ -353,18 +353,16 @@
 
 
 
-
-<!--footer-->
-<footer>
-    <div class="footer-item">
-        <div class="label">
-          <a class="contact-us" href="donate.html" id="contactus">Contact Us</a>
-          <a class="donat-io" href="donate.html" id="contactus">Donat.io</a>
-        </div>
-    </div>
-    </footer>
-
-    <script type="text/javascript">
+  <!--footer-->
+  <footer>
+      <div class="footer-item">
+          <div class="label">
+            <a class="contact-us" href="donate.html" id="contactus">Contact Us</a>
+            <a class="donat-io" href="donate.html" id="contactus">Donat.io</a>
+          </div>
+      </div>
+      </footer>
+      <script type="text/javascript">
         function getUrlVars() {
           var vars = {};
           var url = decodeURIComponent(window.location.href.replace(/\+/g, '%20'));
@@ -384,7 +382,7 @@
         }
         else{
         document.getElementById("signin").innerHTML = "Welcome, " + text;
-        document.getElementById("signin").removeAttribute("href");
+        document.getElementById("signin").href="indexhist.html?username=" +text;
         document.getElementById("signup").innerHTML = "Sign Out";
         document.getElementById("signup").href="index.html";
         document.getElementById("footer-item").style.display = "flex";
