@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html>
+<title>Donat.io </title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+</head>
+
+<body>
+  <div class = "container">
+      <!--top navbar -->
+      <div class="header">
+        <a href="#default" class="logo">DONAT.IO</a>
+        <div class="header-right">
+            <a class="sign-in" href="html/signin.html" id="signin">Sign In</a>
+            <a class="sign-up" href="html/signup.html" id="signup">Sign Up</a>
+        </div>
+      </div>
+     <div class="main">
+         <div class="left">
+
+         </div>
+         <div class="right">
+             <div class="wrap">
+                  <div class="search">
+                  <input type="text" class="searchTerm" id="search" placeholder="What causes do you want to support?" >
+                  <button type="submit" class="searchButton">
+                      <i class="fa fa-search"></i>
+                  </button>
+                  </div>
+             </div>
+             <div class="cat">
+                 <div class="group">
+                     <input type="radio" id="Environment" name="category" value="Environment">
+                     <label for="female">Environment</label><br>
+                     <input type="radio" id="Education" name="category" value="Education">
+                     <label for="other">Education</label><br>
+                     <input type="radio" id="Health" name="category" value="Health">
+                     <label for="female">Health</label><br>
+                     <input type="radio" id="Humanitarian" name="category" value="Humanitarian">
+                     <label for="female">Humanitarian</label><br>
+                     <input type="radio" id="Public Service" name="category" value="Public Service">
+                     <label for="female">Public Service</label><br>
+                     <input type="radio" id="Other" name="category" value="Other">
+                     <label for="female">Other</label></a>
+
+                     <div class="button">
+                         <button type="button" onclick = "submitCat()"> Submit </button>
+                     </div>
+                 </div>
+             </div>
+             <!-- Collapsibles -->
+             <table class="col" id="myTable" border = "1">
+             <div>
+                 <tr>
+                 <td id="Health" style="display:none;">Pink Ribbon Foundation</td>
+                 <td>
+                     <button type="button" class="collapsible">Pink Ribbon Foundation</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             <p>The Pink Ribbon Foundation is a grant making trust with a mission to fund projects and provide financial support to UK charities which relieve the needs of people who are suffering from, have been affected by breast cancer, or who work to advance the understanding of breast cancer and its early detection and treatment.</p>
+                             <a href="https://www.pinkribbonfoundation.org.uk" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                         <figure class="highcharts-figure">
+                             <div id="container" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                             </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Environment" style="display:none;">World Wildlife Fund</td>
+                 <td>
+                     <button type="button" class="collapsible">World Wildlife Fund</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             <p>WWF connects cutting-edge conservation science with the collective power of our partners in the field, more than one million supporters in the United States and five million globally, as well as partnerships with communities, companies, and government</p>
+                             <a href="https://www.worldwildlife.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                         <figure class="highcharts-figure">
+                             <figure class="highcharts-figure">
+                              <div id="container5" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                              </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Humanitarian" style="display:none;">Child In Need Institute</td>
+                 <td>
+                     <button type="button" class="collapsible">Child In Need Institute</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> Child In Need Institute (CINI) provides and facilitates nutrition, health, education and protection services to poor and marginalized children and women in villages and slum areas in West Bengal, Chattisgarh, and Jharkhand states of India.</p>
+                             <a href="https://healthmarketinnovations.org/program/child-need-institute-cini" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                             <div id="container2" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                           </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Humanitarian" style="display:none;">Childline India</td>
+                 <td>
+                     <button type="button" class="collapsible">Childline India</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement: </p>
+                             </p>CHILDLINE aims to reach out to every child in need and ensure their rights and protection. Our four Cs model – Connect, Catalyze, Collaborate and Communicate – is the system that enables us to reach out to more and more children, every year.</p>
+                             <a href="https://www.childlineindia.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                               <div id="container3" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                           </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Humanitarian" style="display:none;">Red Cross</td>
+                 <td>
+                     <button type="button" class="collapsible">Red Cross</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> The Red Cross, born of a desire to bring assistance without discrimination to the wounded on the battlefield, endeavors—in its international and national capacity—to prevent and alleviate human suffering wherever it may be found. Its purpose is to protect life and health and to ensure respect for the human being.</p>
+                             <a href="https://www.redcross.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container4" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                              </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Humanitarian" style="display:none;">GreenPeace</td>
+                 <td>
+                     <button type="button" class="collapsible">GreenPeace</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> Greenpeace is a global, independent campaigning organization that uses peaceful protest and creative communication to expose global environmental problems and promote solutions that are essential to a green and peaceful future.</p>
+                             <a href="https://www.greenpeace.org/usa/" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container6" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Environment" style="display:none;">Nature Conservance</td>
+                 <td>
+                     <button type="button" class="collapsible">Nature Conservance</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> The Nature Conservancy is a global environmental nonprofit working to create a world where people and nature can thrive.</p>
+                             <a href="https://www.nature.org/en-us/" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                             <div id="container7" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                             </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Environment" style="display:none;">Environmental Defense Fund</td>
+                 <td>
+                     <button type="button" class="collapsible">Environmental Defense Fund</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> Environmental Defense Fund's mission is to preserve the natural systems on which all life depends. Guided by science and economics, we find practical and lasting solutions to the most serious environmental problems.</p>
+                             <a href="https://www.edf.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container8" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Education" style="display:none;">Room to Read</td>
+                 <td>
+                     <button type="button" class="collapsible">Room to Read</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> Room to Read seeks to transform the lives of millions of children in developing countries by focusing on literacy and gender equality in education.</p>
+                             <a href="https://www.roomtoread.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container9" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Public Service" style="display:none;">American Society for Microbiology</td>
+                 <td>
+                     <button type="button" class="collapsible">American Society for Microbiology</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement:</p>
+                             </p> ASM's mission is "to promote and advance the microbial sciences." The society seeks to accomplish this mission through: Publishing highly-cited publications. Running multi-disciplinary meetings.</p>
+                             <a href="https://www.asm.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container10" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id ="Health" style="display:none;">Consortium of Universities for Global Health</td>
+                 <td>
+                     <button type="button" class="collapsible">Consortium of Universities for Global Health</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement: </p>
+                             </p> CUGH supports academic institutions and partners to improve the wellbeing of people and the planet through education, research, service, and advocacy.</p>
+                             <a href="https://www.cugh.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container11" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Health" style="display:none;">The Global Health Network</td>
+                 <td>
+                     <button type="button" class="collapsible">The Global Health Network</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement: </p>
+                             </p> GlobeMed aims to strengthen the movement for global health equity by empowering students and communities to work together to improve the health of all people around the world.</p>
+                             <a href="https://tghn.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container12" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Public Service" style="display:none;">The Earth Institute</td>
+                 <td>
+                     <button type="button" class="collapsible">The Earth Institute</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement: </p>
+                             </p> Achieving sustainable development is the primary mission of the Earth Institute. More than 800 scientists are applying their expertise to reducing hunger, disease and environmental degradation, particularly in nations ravaged by global pandemics, climate change and extreme poverty.</p>
+                             <a href="https://www.earth.columbia.edu" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container13" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Health" style="display:none;">International Society for Infectious Diseases</td>
+                 <td>
+                     <button type="button" class="collapsible">International Society for Infectious Diseases</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement: </p>
+                             </p> At the International Society for Infectious Diseases (ISID), our mission is to support health professionals, non-government organizations, and governments around the world in their work to prevent, investigate, and manage infectious disease outbreaks when they occur.</p>
+                             <a href="https://isid.org" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container14" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id= "Humanitarian" style="display:none;">CARE</td>
+                 <td>
+                     <button type="button" class="collapsible">CARE</button>
+                     <div class="content">
+                         <div class="left">
+                             <p class="properties">Mission Statement: </p>
+                             </p>CARE International's mission is to serve individuals and families in the poorest communities in the world. Drawing strength from our global diversity, resources and experience, we promote innovative solutions and are advocates for global responsibility.</p>
+                             <a href="https://www.care.org/about" ><button>Donate!</button></a>
+                         </div>
+                         <div class="right">
+                             <figure class="highcharts-figure">
+                              <div id="container15" style ="width: 100%; height: 200px;display: inline-block;"></div>
+                          </figure>
+                         </div>
+                     </div>
+                 </td>
+                 </tr>
+             </div>
+             </table>
+         </div>
+     </div>
+     <br>
+     <div class="head-container" id = "headlines">
+        <div id = "news-section">
+            <h2>Recent Headlines Related To Search</h1>
+            <div class="news" id = "news">
+                <!--implmented in js-->
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+  <!--footer-->
+  <footer>
+      <div class="footer-item">
+          <div class="label">
+            <a class="contact-us" href="donate.html" id="contactus">Contact Us</a>
+            <a class="donat-io" href="donate.html" id="contactus">Donat.io</a>
+          </div>
+      </div>
+      </footer>
+      <script type="text/javascript">
+        function getUrlVars() {
+          var vars = {};
+          var url = decodeURIComponent(window.location.href.replace(/\+/g, '%20'));
+          var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                function(m,key,value) {
+            vars[key] = value;
+          });
+          return vars;
+        }
+        var text = getUrlVars()["username"];
+        document.getElementById("signin").innerHTML = text;
+        if (document.getElementById("signin").innerHTML == "undefined"){
+          document.getElementById("signin").innerHTML = "Sign In";
+          document.getElementById("signin").setAttribute("href", "html/signin.html");
+          document.getElementById("footer-item").style.display = "none";
+        //document queryselector display to
+        }
+        else{
+        document.getElementById("signin").innerHTML = "Welcome, " + text;
+        document.getElementById("signin").href="indexhist.html?username=" +text;
+        document.getElementById("signup").innerHTML = "Sign Out";
+        document.getElementById("signup").href="index.html";
+        document.getElementById("footer-item").style.display = "flex";
+      }
+
+      </script>
+</div>
+  <script type="text/javascript" src="content.js"></script>
+  <script type="text/javascript" src="charts.js"></script>
+  <script type="text/javascript" src="collapsible.js"></script>
+
+  </body>
+  </html>

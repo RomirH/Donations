@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<title>Donat.io </title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/sign.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class = "container">
+    <!--top navbar -->
+    <div class="header">
+        <a href="#default" class="logo">DONAT.IO</a>
+    </div>
+
+  <div class="form-popup" id="signuppage">
+    <div class = "userprofile" id="userprofile">
+    <form id="form" action="../donate.html" method="GET" onsubmit="store()">
+     <ul>
+  <a>
+        <label for="name">Name:</label><br>
+        <input type="text" id="username" name="username"
+        required><br><br>
+        <label for="pass">Password:</label><br>
+        <input pattern="(?=.*\d)(?=.*[a-z]).{8,}" type="password" minlength="8" maxlength="25" id="pass" name="pass" required
+        title="Password is incorrect" autocomplete="off" ><br><br>
+        <span id='message'></span>
+    <div>
+      <a id="sbtn"><br><br><button onclick='checkPass2()'>Submit</button></a>
+    </div>
+  </a>
+     </ul>
+    </form>
+    </div>
+  </div>
+
+
+  <script type= "text/javascript">
+  function checkPass2(){
+    if(document.getElementById('username').value =="Willie"){
+      if (document.getElementById('pass').value == "password1")
+        {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password Correct';
+        document.getElementById('form').action = "../html/donatefixed.html"
+        checkForm();
+        }
+        else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password Incorrect';
+      }
+    }
+    else if (document.getElementById('username').value =="Wildcat"){
+      if (document.getElementById('pass').value == "password2")
+        {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Password Correct';
+        document.getElementById('form').action = "../html/donatefixed2.html"
+
+        checkForm();
+        }
+        else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password Incorrect';
+      }
+    }
+
+    else {
+      document.getElementById('message').style.color = 'red';
+      document.getElementById('message').innerHTML = 'Password Incorrect';
+      document.getElementById('form').action = "";
+      document.getElementById('form').method = "POST";
+    }
+  }
+  </script>
+
+
+  <script type="text/javascript">
+  function checkForm(form)
+    {
+      if(form.pwd1.value != "" && form.pass.value == form.passc.value) {
+          return false;
+        }
+    }
+  </script>
+
+
+
+</div>
+
+
+</body>
+</html>
